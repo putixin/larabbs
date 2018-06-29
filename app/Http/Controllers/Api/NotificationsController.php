@@ -7,6 +7,13 @@ use App\Transformers\NotificationTransformer;
 
 class NotificationsController extends Controller
 {
+    public function read()
+    {
+        $this->user()->markAsRead();
+
+        return $this->response->noContent();
+    }
+
     public function index()
     {
         $notifications = $this->user->notifications()->paginate(20);
