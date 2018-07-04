@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// 测试phpunit
+Route::get('test', 'TopicsController@test')->name('test');
 
 Route::get('/', 'TopicsController@index')->name('root');
 
